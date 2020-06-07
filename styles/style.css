@@ -1,1 +1,107 @@
 @import "reset.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: #B9DEE6;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-card {
+    --user-image-size: 200px;
+    --user-county-size: 40px;
+    --secondary-color: #FA001D;
+    --border-color: #EFEFEF;
+
+    background: white;
+
+    margin: 15px;
+    padding: 30px;
+    min-width: 200px;
+    width: 100%;
+    max-width: 320px;
+
+    border-radius: 5px;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.image-wrapper {
+    margin-bottom: 2em;
+    position: relative;
+}
+
+img.profile-pic {
+    height: var(--user-image-size);
+    width: var(--user-image-size);
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid var(--border-color);
+}
+
+.user-country {
+    height: var(--user-county-size);
+    width: var(--user-county-size);
+
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+
+    background-image: url("../images/Flag_of_Ukraine.svg");
+    background-position: center;
+    object-fit: cover;
+
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px var(--border-color);
+}
+
+.user-name {
+    margin: 8px 0;
+    text-transform: capitalize;
+    font-size: 1.7em;
+    line-height: 1.3;
+    color: var(--secondary-color);
+}
+
+.user-occupation {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+
+.user-description {
+    margin: 40px 0;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+svg.social-icon{
+    height: 22px;
+    width: 22px;
+    fill: var(--secondary-color);
+}
